@@ -1,0 +1,16 @@
+.button {
+  font-size: rem(15px);
+  @include size(135px, 45px);
+  color: $secondaryFontColor;
+  background-color: $primaryColor;
+  cursor: pointer;
+  transition: 0.3s linear;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}

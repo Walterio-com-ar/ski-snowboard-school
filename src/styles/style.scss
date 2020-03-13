@@ -1,0 +1,15 @@
+@import 'abstracts/abstracts';
+@import 'base/base';
+@import 'components/components';
+@import 'layout/layout';
+
+html,
+body {
+  position: relative;
+  font-family: $mainFont;
+  color: $mainFontColor;
+  font-size: $mainFontSize;
+  font-weight: $regular;
+  line-height: $mainLineHeight;
+  scroll-behavior: smooth;
+}
