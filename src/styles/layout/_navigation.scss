@@ -1,0 +1,40 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: $maxWidth;
+  height: 95px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  &-menu {
+    display: flex;
+    height: 61px;
+
+    &__item,
+    &__link {
+      height: 100%;
+    }
+
+    &__item {
+      margin-right: 40px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      font-size: rem(16px);
+      font-weight: $bold;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+}

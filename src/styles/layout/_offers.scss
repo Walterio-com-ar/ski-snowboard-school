@@ -1,0 +1,56 @@
+.offers {
+  padding-top: 120px;
+
+  &-heading {
+    margin-bottom: 50px;
+  }
+
+  &-text {
+    text-align: center;
+    font-weight: $light;
+    max-width: 930px;
+    margin: 0 auto;
+    margin-bottom: 75px;
+  }
+
+  &-blocks {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      @include size(250px, 405px);
+      margin: 0 auto;
+    }
+
+    &__image {
+      display: block;
+      @include size(auto, 205px);
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+
+    &__text,
+    &__heading {
+      text-align: center;
+    }
+
+    &__text {
+      text-transform: uppercase;
+      font-size: rem(14px);
+      font-weight: $light;
+      margin-bottom: 5px;
+    }
+
+    &__heading {
+      font-size: rem(24px);
+      margin-bottom: auto;
+    }
+
+    &__button {
+      margin: 0 auto;
+    }
+  }
+}

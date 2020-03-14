@@ -1,0 +1,77 @@
+.testimonials {
+  height: 750px;
+  padding: 160px 0;
+
+  &-heading {
+    margin-bottom: 60px;
+  }
+
+  &-quotes {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    @include size(132px);
+  }
+
+  &-quote__left,
+  &-quote__right {
+    position: absolute;
+    bottom: -20px;
+    @include size(55px, 40px);
+    opacity: 0.1;
+  }
+
+  &-quote__left {
+    left: -50px;
+  }
+
+  &-quote__right {
+    right: -50px;
+    transform: rotate(180deg);
+  }
+
+  &-review {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    &__client-photo {
+      display: block;
+      @include size(100%);
+    }
+
+    &__client-name {
+      position: relative;
+      font-family: $secondaryFont;
+      text-transform: uppercase;
+      font-weight: $black;
+      margin-bottom: 40px;
+    }
+
+    &__client-text {
+      display: block;
+      font-weight: $light;
+      width: 825px;
+      margin: 0 auto;
+      margin-bottom: 55px;
+    }
+  }
+
+  &-dots {
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+    margin: 0 auto;
+  }
+
+  &-dot {
+    display: block;
+    @include size(15px);
+    background-color: $dotColor;
+    border-radius: 50%;
+  }
+
+  .dot-active {
+    background-color: $primaryColor;
+  }
+}

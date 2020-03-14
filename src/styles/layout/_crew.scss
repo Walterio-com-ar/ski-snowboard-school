@@ -1,0 +1,41 @@
+.crew {
+  padding: 160px 0;
+
+  &-heading {
+    margin-bottom: 60px;
+  }
+
+  &-instructors {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__item {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &__photo {
+      margin-bottom: 30px;
+    }
+
+    &__position,
+    &__name {
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1;
+    }
+
+    &__position {
+      font-size: rem(14px);
+      font-weight: $light;
+      margin-bottom: 20px;
+    }
+
+    &__name {
+      font-family: $secondaryFont;
+      font-weight: $black;
+      font-size: rem(24px);
+    }
+  }
+}

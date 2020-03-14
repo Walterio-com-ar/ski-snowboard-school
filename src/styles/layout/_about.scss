@@ -1,0 +1,43 @@
+.about {
+  background: url(../images/section-bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 1085px;
+
+  &-heading {
+    text-align: left;
+    max-width: 660px;
+    margin-bottom: 60px;
+    padding-top: 230px;
+  }
+
+  &-text {
+    font-weight: $light;
+    max-width: 800px;
+    margin-bottom: 30px;
+
+    &:last-of-type {
+      margin-bottom: 75px;
+    }
+  }
+
+  &-achievements {
+    display: flex;
+
+    &__item {
+      margin-right: 100px;
+    }
+
+    &__number {
+      font-family: $secondaryFont;
+      font-weight: $black;
+      font-size: rem(60px);
+      color: $primaryColor;
+      line-height: 1;
+    }
+
+    &__text {
+      text-transform: uppercase;
+    }
+  }
+}

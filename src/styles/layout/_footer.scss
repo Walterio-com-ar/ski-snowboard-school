@@ -1,0 +1,72 @@
+footer {
+  display: flex;
+  height: 640px;
+
+  .contacts {
+    min-width: 640px;
+    height: 100%;
+    color: $secondaryFontColor;
+    background-color: $footerBackground;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      width: 510px;
+      margin-left: auto;
+    }
+
+    &-heading {
+      text-align: left;
+      margin-top: 100px;
+      margin-bottom: 60px;
+    }
+
+    &-list {
+      width: 345px;
+
+      &__item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 35px;
+      }
+
+      &__icon {
+        display: block;
+        margin-right: 20px;
+        fill: $primaryColor;
+
+        svg {
+          @include size(22px);
+        }
+      }
+
+      &__text {
+        text-transform: uppercase;
+        font-weight: $light;
+      }
+    }
+
+    &-social {
+      display: flex;
+      justify-content: space-between;
+      width: 155px;
+      padding-top: 25px;
+
+      &__icon {
+        @include size(36px);
+        fill: #fff;
+        opacity: 0.5;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .footer-map {
+    @include size(100%);
+  }
+}

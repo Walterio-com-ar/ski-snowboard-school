@@ -11,5 +11,24 @@ body {
   font-size: $mainFontSize;
   font-weight: $regular;
   line-height: $mainLineHeight;
+  background-color: $backGround;
   scroll-behavior: smooth;
+}
+
+a {
+  color: $secondaryFontColor;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $secondaryFont;
+  text-transform: uppercase;
+  line-height: $headerLineHeight;
+  font-weight: $black;
+}
+
+h2 {
+  font-size: rem(60px);
+  text-align: center;
 }

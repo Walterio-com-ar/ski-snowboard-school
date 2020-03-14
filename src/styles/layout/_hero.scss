@@ -1,0 +1,32 @@
+.hero {
+  margin-top: 90px;
+
+  &-heading__secondary,
+  &-heading__primary {
+    font-weight: $black;
+    text-align: center;
+    color: rgba(254, 254, 254, 0.3);
+  }
+
+  &-heading__secondary {
+    font-size: rem(30px);
+    margin-bottom: 15px;
+  }
+
+  &-heading__primary {
+    font-size: rem(230px);
+  }
+
+  &-text {
+    font-size: rem(24px);
+    color: $secondaryFontColor;
+    max-width: 670px;
+    margin-top: 130px;
+  }
+
+  .button {
+    font-size: rem(18px);
+    margin-top: 25px;
+    @include size(240px, 60px);
+  }
+}
