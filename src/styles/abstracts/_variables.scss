@@ -4,8 +4,8 @@ $secondaryFont: 'Catamaran', Helvetica, Arial, sans-serif;
 
 // font-sizes
 $mainFontSize: 18px;
-$mainLineHeight: 1.8;
-$headerLineHeight: 1.2;
+$mainLineHeight: 1.6;
+$headerLineHeight: 1;
 
 // font-weight
 $light: 300;
@@ -14,11 +14,13 @@ $bold: 700;
 $black: 900;
 
 // screen widths
-$maxWidth: 1680px;
-$contentWidth: 1260px;
+$maxWidth: 1740px;
+$contentWidth: 1300px;
 
 // colors
 $primaryColor: #ff660d;
+
+$dotColor: #d1d8df;
 
 $mainFontColor: #2f2f2f;
 $secondaryFontColor: #fff;

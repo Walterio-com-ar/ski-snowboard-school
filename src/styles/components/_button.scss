@@ -1,8 +1,13 @@
 .button {
+  display: block;
   font-size: rem(15px);
-  @include size(135px, 45px);
+  font-family: $secondaryFont;
+  font-weight: $bold;
+  text-transform: uppercase;
+  @include size(120px, 50px);
   color: $secondaryFontColor;
   background-color: $primaryColor;
+  border-radius: 5px;
   cursor: pointer;
   transition: 0.3s linear;
 
