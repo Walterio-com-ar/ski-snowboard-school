@@ -17,6 +17,10 @@
     font-size: rem(230px);
   }
 
+  &-content {
+    position: relative;
+  }
+
   &-text {
     font-size: rem(24px);
     color: $secondaryFontColor;

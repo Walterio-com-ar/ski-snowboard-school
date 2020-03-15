@@ -1,6 +1,44 @@
 header {
-  background: url(../images/main-background.jpg) no-repeat;
-  background-position: center;
+  position: relative;
+  background: url(../images/main-background.jpg) center no-repeat;
   background-size: cover;
   height: 100vh;
+
+  .parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(100%, 100vh);
+    pointer-events: none;
+
+    &-layer {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      @include size(100%);
+    }
+
+    &-image-1 {
+      background: url(../images/main-mountains.png) bottom no-repeat;
+      background-size: 100% 63%;
+    }
+
+    &-image-2 {
+      background: url(../images/main-boarder.png) no-repeat;
+      background-position: top 100% left 89%;
+      background-size: 920px auto;
+      position: relative;
+    }
+
+    &-image-3 {
+      background: url(../images/main-heel.png) bottom no-repeat;
+      background-size: 100% 25%;
+    }
+
+    &-image-4 {
+      background: url(../images/main-lining.png) no-repeat;
+      background-position: bottom -1px right 0;
+      background-size: 100% auto;
+    }
+  }
 }
