@@ -1,5 +1,5 @@
 .crew {
-  padding: 160px 0;
+  padding: 90px 0;
 
   &-heading {
     margin-bottom: 60px;
@@ -13,9 +13,12 @@
     &__item {
       display: block;
       margin: 0 auto;
+      margin-bottom: 30px;
     }
 
     &__photo {
+      display: block;
+      margin: 0 auto;
       margin-bottom: 30px;
     }
 
@@ -36,6 +39,42 @@
       font-family: $secondaryFont;
       font-weight: $black;
       font-size: rem(24px);
+    }
+  }
+}
+
+@media screen and (max-width: $maxWidth) {
+  .crew-instructors__photo {
+    @include size(90%, auto);
+  }
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  .crew-instructors__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: $mobileWidth) {
+  .crew {
+    padding: 55px 0;
+
+    &-heading {
+      margin-bottom: 40px;
+    }
+
+    &-instructors {
+      &__item {
+        margin-bottom: 40px;
+      }
+
+      &__photo {
+        margin-bottom: 10px;
+      }
+
+      &__position {
+        margin-bottom: 5px;
+      }
     }
   }
 }

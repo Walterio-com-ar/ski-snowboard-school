@@ -1,5 +1,5 @@
 .hero {
-  margin-top: 90px;
+  padding-top: 205px;
 
   &-heading__secondary,
   &-heading__primary {
@@ -25,12 +25,192 @@
     font-size: rem(24px);
     color: $secondaryFontColor;
     max-width: 670px;
-    margin-top: 130px;
+    margin-top: 115px;
   }
 
   .button {
     font-size: rem(18px);
     margin-top: 25px;
     @include size(240px, 60px);
+  }
+}
+
+@media screen and (max-width: $maxWidth) {
+  .hero {
+    padding-top: 160px;
+
+    &-heading__secondary {
+      font-size: rem(25px);
+      margin-bottom: 0;
+    }
+
+    &-heading__primary {
+      font-size: rem(200px);
+    }
+
+    &-text {
+      font-size: rem(18px);
+      max-width: 490px;
+      margin-top: 85px;
+    }
+
+    .button {
+      @include size(185px, 45px);
+    }
+  }
+}
+
+@media screen and (width: 1366px) and (height: 1024px) {
+  .hero {
+    padding-top: 240px;
+
+    &-heading__secondary {
+      font-size: rem(35px);
+    }
+
+    &-heading__primary {
+      font-size: rem(230px);
+    }
+
+    &-text {
+      font-size: rem(23px);
+      max-width: 550px;
+      margin-top: 115px;
+    }
+
+    .button {
+      @include size(205px, 50px);
+    }
+  }
+}
+
+@media screen and (width: 1024px) and (height: 1366px) {
+  .hero {
+    padding-top: 300px;
+
+    &-heading__secondary {
+      font-size: rem(35px);
+    }
+
+    &-heading__primary {
+      font-size: rem(167px);
+    }
+
+    &-text {
+      font-size: rem(23px);
+      max-width: 550px;
+      margin-top: 175px;
+    }
+
+    .button {
+      @include size(205px, 50px);
+    }
+  }
+}
+
+@media screen and (width: 1024px) and (height: 768px) {
+  .hero {
+    padding-top: 170px;
+
+    &-heading__secondary {
+      font-size: rem(35px);
+    }
+
+    &-heading__primary {
+      font-size: rem(167px);
+    }
+
+    &-text {
+      font-size: rem(19px);
+      max-width: 460px;
+      margin-top: 85px;
+    }
+
+    .button {
+      @include size(190px, 45px);
+    }
+  }
+}
+
+@media screen and (width: 768px) and (height: 1024px) {
+  .hero {
+    padding-top: 250px;
+
+    &-heading__secondary {
+      font-size: rem(35px);
+    }
+
+    &-heading__primary {
+      font-size: rem(150px);
+    }
+
+    &-text {
+      font-size: rem(20px);
+      max-width: 480px;
+      margin-top: 105px;
+    }
+
+    .button {
+      @include size(190px, 45px);
+    }
+  }
+}
+
+@media screen and (max-width: $mobileWidth) {
+  .hero {
+    padding-top: 140px;
+
+    &-heading__secondary {
+      font-size: rem(18px);
+      margin-bottom: 10px;
+    }
+
+    &-heading__primary {
+      font-size: rem(65px);
+    }
+
+    &-text {
+      font-size: rem(18px);
+      margin-top: 55px;
+    }
+  }
+}
+
+@media screen and (max-width: $smMobileWidth) {
+  .hero {
+    padding-top: 150px;
+
+    &-heading__primary {
+      font-size: rem(59px);
+    }
+
+    &-text {
+      font-size: rem(15px);
+      margin-top: 45px;
+    }
+
+    .button {
+      @include size(125px, 40px);
+      font-size: rem(15px);
+    }
+  }
+}
+
+@media screen and (width: 375px) and (height: 812px) {
+  .hero {
+    padding-top: 220px;
+
+    &-heading__primary {
+      font-size: rem(71px);
+    }
+
+    &-text {
+      font-size: rem(18px);
+      margin-top: 70px;
+    }
+
+    .button {
+      @include size(185px, 45px);
+    }
   }
 }

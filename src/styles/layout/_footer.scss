@@ -6,12 +6,12 @@ footer {
     min-width: 640px;
     height: 100%;
     color: $secondaryFontColor;
-    background-color: $footerBackground;
+    background-color: $backGroundSecondary;
 
     &-content {
       display: flex;
       flex-direction: column;
-      width: 510px;
+      width: 485px;
       margin-left: auto;
     }
 
@@ -62,11 +62,120 @@ footer {
         &:hover {
           opacity: 1;
         }
+
+        &:active {
+          transform: scale(0.9);
+        }
       }
     }
   }
 
   .footer-map {
     @include size(100%);
+  }
+}
+
+@media screen and (max-width: $maxWidth) {
+  footer {
+    height: 490px;
+
+    .contacts {
+      min-width: 490px;
+
+      &-heading {
+        font-size: rem(55px);
+      }
+
+      &-content {
+        width: 370px;
+        font-size: rem(17px);
+      }
+
+      &-heading {
+        margin-top: 65px;
+        margin-bottom: 40px;
+      }
+
+      &-list {
+        width: 320px;
+
+        &__item {
+          margin-bottom: 20px;
+        }
+      }
+
+      &-social {
+        padding-top: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  footer {
+    .contacts {
+      min-width: 390px;
+
+      &-heading {
+        font-size: rem(55px);
+      }
+
+      &-content {
+        width: 340px;
+        font-size: rem(17px);
+      }
+
+      &-heading {
+        margin-top: 65px;
+        margin-bottom: 40px;
+      }
+
+      &-list {
+        width: 320px;
+
+        &__item {
+          margin-bottom: 20px;
+        }
+      }
+
+      &-social {
+        padding-top: 25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobileWidth) {
+  footer {
+    height: 490px;
+
+    .contacts {
+      min-width: 100%;
+
+      &-heading {
+        font-size: rem(54px);
+      }
+
+      &-content {
+        width: auto;
+        padding: 0 30px;
+      }
+
+      &-list {
+        width: auto;
+      }
+    }
+
+    .footer-map {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: $smMobileWidth) {
+  footer {
+    .contacts-heading {
+      font-size: rem(47px);
+    }
   }
 }

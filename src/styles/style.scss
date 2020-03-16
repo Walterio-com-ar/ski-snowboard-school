@@ -32,3 +32,26 @@ h2 {
   font-size: rem(60px);
   text-align: center;
 }
+
+@media screen and (max-width: $maxWidth) {
+  html,
+  body {
+    font-size: calc(#{$mainFontSize} - 2px);
+  }
+
+  .container {
+    max-width: 1124px;
+  }
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  .container {
+    max-width: 824px;
+  }
+}
+
+@media screen and (max-width: $mobileWidth) {
+  h2 {
+    font-size: rem(42px);
+  }
+}

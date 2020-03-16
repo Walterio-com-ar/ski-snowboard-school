@@ -1,6 +1,6 @@
 .about {
   background: url(../images/section-bg.jpg) no-repeat;
-  background-position: center;
+  background-position: left;
   background-size: cover;
   height: 1085px;
 
@@ -26,6 +26,10 @@
 
     &__item {
       margin-right: 100px;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
 
     &__number {
@@ -38,6 +42,72 @@
 
     &__text {
       text-transform: uppercase;
+    }
+  }
+}
+
+@media screen and (max-width: $maxWidth) {
+  .about {
+    height: 885px;
+
+    &-heading {
+      padding-top: 200px;
+    }
+
+    &-text {
+      max-width: 710px;
+    }
+  }
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  .about-achievements__item {
+    margin-right: 60px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $mobileWidth) {
+  .about {
+    height: 800px;
+
+    &-heading {
+      padding-top: 80px;
+      margin-bottom: 45px;
+    }
+
+    &-text {
+      margin-bottom: 15px;
+    }
+
+    &-achievements {
+      &__item {
+        margin-right: 20px;
+      }
+
+      &__number {
+        font-size: rem(40px);
+      }
+
+      &__text {
+        font-size: rem(11px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $smMobileWidth) {
+  .about {
+    &-heading {
+      padding-top: 70px;
+      margin-bottom: 40px;
+    }
+
+    &-text:last-of-type {
+      margin-bottom: 45px;
     }
   }
 }

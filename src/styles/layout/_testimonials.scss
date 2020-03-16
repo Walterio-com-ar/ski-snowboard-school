@@ -1,6 +1,5 @@
 .testimonials {
-  height: 750px;
-  padding: 160px 0;
+  padding: 140px 20px;
 
   &-heading {
     margin-bottom: 60px;
@@ -51,7 +50,7 @@
     &__client-text {
       display: block;
       font-weight: $light;
-      width: 825px;
+      max-width: 845px;
       margin: 0 auto;
       margin-bottom: 55px;
     }
@@ -73,5 +72,11 @@
 
   .dot-active {
     background-color: $primaryColor;
+  }
+}
+
+@media screen and (max-width: $mobileWidth) {
+  .testimonials {
+    padding: 90px 20px;
   }
 }

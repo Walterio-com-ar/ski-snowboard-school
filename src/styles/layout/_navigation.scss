@@ -71,13 +71,34 @@ header {
 }
 
 @media screen and (max-width: $maxWidth) {
+  header {
+    .sticky-nav .nav {
+      height: 60px;
+    }
+  }
+
   .nav {
     max-width: 1324px;
-    height: 80px;
+    height: 90px;
+    align-items: center;
+
+    &-logo {
+      @include size(125px, auto);
+    }
+
+    &-menu__link {
+      font-size: rem(15px);
+    }
+  }
+}
+
+@media screen and (max-width: $tabletWidth) {
+  .nav {
+    height: 60px;
 
     &-menu {
       &__item {
-        margin-right: 25px;
+        margin-right: 15px;
       }
 
       &__link {
@@ -94,9 +115,8 @@ header {
   }
 
   .nav {
-    align-items: center;
-    height: 45px;
-    padding: 0 20px;
+    height: 49px;
+    padding: 4px 20px;
     box-shadow: none;
 
     &-logo {
@@ -105,7 +125,7 @@ header {
 
     &-menu {
       position: absolute;
-      top: 45px;
+      top: 49px;
       left: 0;
       flex-direction: column;
       justify-content: space-around;

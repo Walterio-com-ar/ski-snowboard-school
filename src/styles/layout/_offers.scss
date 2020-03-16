@@ -1,6 +1,6 @@
 .offers {
-  padding-top: 120px;
-  padding-bottom: 160px;
+  padding: 20px;
+  padding-top: 90px;
 
   &-heading {
     margin-bottom: 50px;
@@ -24,6 +24,11 @@
       flex-direction: column;
       @include size(250px, 405px);
       margin: 0 auto;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     &__image {
@@ -53,5 +58,39 @@
     &__button {
       margin: 0 auto;
     }
+  }
+}
+
+@media screen and (max-width: $smDesktopWidth) {
+  .offers-blocks__item {
+    height: 360px;
+  }
+
+  .offers-blocks__image {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: $mobileWidth) {
+  .offers {
+    padding: 0 20px;
+    padding-top: 65px;
+
+    &-heading {
+      margin-bottom: 20px;
+    }
+
+    &-text {
+      text-align: left;
+      margin-bottom: 35px;
+    }
+  }
+
+  .offers-blocks__item {
+    height: 350px;
+  }
+
+  .offers-blocks__image {
+    margin-bottom: 10px;
   }
 }
