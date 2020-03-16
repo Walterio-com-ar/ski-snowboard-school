@@ -1,11 +1,21 @@
+nav {
+  .show {
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 0.4s;
+  }
+}
+
 .nav {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   max-width: $maxWidth;
-  height: 95px;
+  @include size(100%, 95px);
   margin: 0 auto;
   padding: 0 30px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
 
   &-menu {
     display: flex;
@@ -34,6 +44,65 @@
 
       &:hover {
         color: $primaryColor;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $maxWidth) and (min-width: $desktopWidth) {
+  .nav {
+    max-width: 1324px;
+    height: 80px;
+
+    &-menu {
+      &__item {
+        margin-right: 25px;
+      }
+
+      &__link {
+        font-size: rem(14px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobileWidth) {
+  .nav {
+    z-index: 2;
+    align-items: center;
+    height: 45px;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    &-logo {
+      @include size(90px, auto);
+    }
+
+    &-menu {
+      position: absolute;
+      top: 45px;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      @include size(100%, calc(100vh - 45px));
+      background-color: rgba(0, 0, 0, 0.7);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.4s, visibility 0.4s;
+
+      &__item {
+        @include size(100%, 8%);
+
+        a {
+          display: block;
+          font-size: 1.2rem;
+          text-align: center;
+        }
+
+        &:hover a {
+          color: $primaryColor;
+        }
       }
     }
   }
