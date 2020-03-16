@@ -15,7 +15,12 @@ $black: 900;
 
 // screen widths
 $maxWidth: 1740px;
-$contentWidth: 1300px;
+$desktopWidth: 1280px;
+$smDesktopWidth: 1024px;
+$tabletWidth: 768px;
+$smtTabletWidth: 640px;
+$mobileWidth: 640px;
+$smMobileWidth: 320px;
 
 // colors
 $primaryColor: #ff660d;

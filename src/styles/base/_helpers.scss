@@ -1,5 +1,5 @@
 .container {
-  max-width: $contentWidth;
+  max-width: calc(#{$desktopWidth} + 40px);
   margin: 0 auto;
   padding: 0 20px;
   width: 100%;
