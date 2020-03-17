@@ -64,6 +64,7 @@
   .gallery {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(9, 1fr);
+    padding-top: 55px;
   }
 
   .grid-item-1 {
@@ -113,11 +114,5 @@
     grid-column-end: 5;
     grid-row-start: 8;
     grid-row-end: 10;
-  }
-}
-
-@media screen and (max-width: $mobileWidth) {
-  .gallery {
-    padding-top: 55px;
   }
 }
