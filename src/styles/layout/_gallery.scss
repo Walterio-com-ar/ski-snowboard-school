@@ -1,13 +1,19 @@
-.gallery {
+.gallery-images {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
   grid-gap: 5px;
   padding-top: 90px;
+}
 
-  &-image {
-    @include size(100%);
-    object-fit: cover;
+.gallery-image {
+  @include size(100%);
+  object-fit: cover;
+  cursor: zoom-in;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.3;
   }
 }
 
@@ -61,7 +67,7 @@
 }
 
 @media screen and (max-width: $mobileWidth) {
-  .gallery {
+  .gallery-images {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(9, 1fr);
     padding-top: 55px;
