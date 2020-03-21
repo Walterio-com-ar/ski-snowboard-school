@@ -21,12 +21,10 @@ function showPrevImage() {
 }
 
 function openModal() {
-  modal.classList.add('modal-show');
   overlay.classList.add('modal-show');
 }
 
 function closeModal() {
-  modal.classList.remove('modal-show');
   overlay.classList.remove('modal-show');
 }
 
