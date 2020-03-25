@@ -1,0 +1,36 @@
+.slider {
+  position: relative;
+  height: 330px;
+  overflow-x: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(-250%);
+  transition: transform 1.5s, opacity 0.3s;
+
+  &.prev,
+  &.current {
+    opacity: 1;
+  }
+
+  &.prev {
+    transform: translateX(-150%);
+  }
+
+  &.current {
+    transform: translateX(0);
+  }
+
+  &.next {
+    transform: translateX(150%);
+  }
+}
+
+@media screen and (max-width: $mobileWidth) {
+  .slider {
+    height: 400px;
+  }
+}
