@@ -64,15 +64,26 @@
     margin: 0 auto;
   }
 
+  &-dot,
+  .dot-active {
+    transition: all 0.3s linear;
+  }
+
   &-dot {
     display: block;
     @include size(15px);
     background-color: $dotColor;
     border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba($primaryColor, 0.5);
+    }
   }
 
   .dot-active {
     background-color: $primaryColor;
+    cursor: default;
   }
 }
 
