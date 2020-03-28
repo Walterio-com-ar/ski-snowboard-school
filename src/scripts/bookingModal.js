@@ -1,3 +1,5 @@
+import { open, close } from './toggleModal';
+
 const bookingOverlay = document.querySelector('.booking .modal-overlay');
 const heroButton = document.querySelector('.hero-button');
 const offerButtons = document.querySelector('.offers-blocks');
@@ -8,12 +10,9 @@ const email = document.querySelector('[type=email]');
 const age = document.querySelector('[name=age]');
 const level = document.querySelector('[name=level]');
 
-function openBookingModal() {
-  bookingOverlay.classList.add('modal-show');
-}
-
-function closeBookingModal() {
-  bookingOverlay.classList.remove('modal-show');
+function toggleOffers(e) {
+  open(bookingOverlay);
+  level.value = e;
 }
 
 function submitForm() {
@@ -39,30 +38,31 @@ function submitForm() {
   }
 }
 
-heroButton.addEventListener('click', openBookingModal);
+heroButton.addEventListener('click', () => open(bookingOverlay));
 
 offerButtons.addEventListener('click', e => {
   if (e.target.matches('[name=beginner]')) {
-    openBookingModal();
-    level.value = 'beginner';
+    toggleOffers('beginner');
   }
   if (e.target.matches('[name=intermediate]')) {
-    openBookingModal();
-    level.value = 'intermediate';
+    toggleOffers('intermediate');
   }
   if (e.target.matches('[name=advanced]')) {
-    openBookingModal();
-    level.value = 'advanced';
+    toggleOffers('advanced');
   }
 });
 
 bookingOverlay.addEventListener('click', e => {
-  if (e.target === e.currentTarget) closeBookingModal();
+  if (e.target === e.currentTarget) close(bookingOverlay);
 });
 
 form.addEventListener('submit', e => {
   e.preventDefault();
   submitForm();
   e.target.reset();
-  closeBookingModal();
+  close(bookingOverlay);
+});
+
+window.addEventListener('keyup', e => {
+  if (e.key === 'Escape') close(bookingOverlay);
 });

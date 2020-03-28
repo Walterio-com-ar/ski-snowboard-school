@@ -1,3 +1,5 @@
+import { open, close } from './toggleModal';
+
 const gallery = document.querySelector('.gallery-images');
 const galleryModal = document.querySelector('.gallery .modal');
 const galleryOverlay = document.querySelector('.gallery .modal-overlay');
@@ -20,28 +22,20 @@ function showPrevImage() {
   showImage(currentImage.previousElementSibling || gallery.lastElementChild);
 }
 
-function openModal() {
-  galleryOverlay.classList.add('modal-show');
-}
-
-function closeModal() {
-  galleryOverlay.classList.remove('modal-show');
-}
-
 function handleKeyUp(e) {
-  if (e.key === 'Escape') closeModal();
+  if (e.key === 'Escape') close(galleryOverlay);
   if (e.key === 'ArrowRight') showNextImage();
   if (e.key === 'ArrowLeft') showPrevImage();
 }
 
 gallery.addEventListener('click', e => {
   if (e.target.matches('.gallery-image')) {
-    openModal();
+    open(galleryOverlay);
     showImage(e.target);
   }
 });
 
-galleryOverlay.addEventListener('click', () => closeModal());
+galleryOverlay.addEventListener('click', () => close(galleryOverlay));
 
 galleryModal.addEventListener('click', e => {
   e.stopPropagation();
