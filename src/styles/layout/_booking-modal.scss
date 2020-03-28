@@ -1,0 +1,44 @@
+.booking-modal {
+  max-width: 90%;
+  padding: 40px 30px;
+  background-color: $backGround;
+  border: 2px solid $primaryColor;
+  border-radius: 2px;
+
+  input,
+  select {
+    margin-bottom: 25px;
+    background-color: rgba($primaryColor, 0.1);
+    border: 1px solid transparent;
+    border-radius: 2px;
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: $primaryColor;
+    }
+  }
+
+  input {
+    @include size(100%, 35px);
+    padding: 5px;
+
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+
+  select {
+    height: 30px;
+    padding: 0 5px;
+
+    &:first-child {
+      margin-right: 35px;
+    }
+  }
+
+  button {
+    @include size(130px, 40px);
+  }
+}
