@@ -1,14 +1,14 @@
 const gallery = document.querySelector('.gallery-images');
-const modal = document.querySelector('.modal');
-const overlay = document.querySelector('.modal-overlay');
-const prevButton = modal.querySelector('.modal-prev');
-const nextButton = modal.querySelector('.modal-next');
+const galleryModal = document.querySelector('.gallery .modal');
+const galleryOverlay = document.querySelector('.gallery .modal-overlay');
+const prevButton = galleryModal.querySelector('.modal-prev');
+const nextButton = galleryModal.querySelector('.modal-next');
 
 let currentImage;
 
 function showImage(target) {
   const image = target.querySelector('img') || target;
-  modal.querySelector('img').src = image.src;
+  galleryModal.querySelector('img').src = image.src;
   currentImage = target.closest('div') || target;
 }
 
@@ -21,11 +21,11 @@ function showPrevImage() {
 }
 
 function openModal() {
-  overlay.classList.add('modal-show');
+  galleryOverlay.classList.add('modal-show');
 }
 
 function closeModal() {
-  overlay.classList.remove('modal-show');
+  galleryOverlay.classList.remove('modal-show');
 }
 
 function handleKeyUp(e) {
@@ -41,9 +41,9 @@ gallery.addEventListener('click', e => {
   }
 });
 
-overlay.addEventListener('click', () => closeModal());
+galleryOverlay.addEventListener('click', () => closeModal());
 
-modal.addEventListener('click', e => {
+galleryModal.addEventListener('click', e => {
   e.stopPropagation();
   if (e.target.matches('.modal-next')) showNextImage();
   if (e.target.matches('.modal-prev')) showPrevImage();
