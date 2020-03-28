@@ -44,7 +44,7 @@
       font-family: $secondaryFont;
       text-transform: uppercase;
       font-weight: $black;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     &__client-text {
@@ -52,7 +52,6 @@
       font-weight: $light;
       max-width: 845px;
       margin: 0 auto;
-      margin-bottom: 55px;
       padding: 0 10px;
     }
   }
@@ -90,5 +89,9 @@
 @media screen and (max-width: $mobileWidth) {
   .testimonials {
     padding: 90px 0;
+
+    &-review__client-name {
+      margin-bottom: 10px;
+    }
   }
 }
