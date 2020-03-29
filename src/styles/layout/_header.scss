@@ -18,16 +18,22 @@ header {
       @include size(100%);
     }
 
+    &-image-1,
+    &-image-3,
+    &-image-4 {
+      z-index: 1;
+    }
+
     &-image-1 {
       background: url(../images/main-mountains.png) bottom no-repeat;
       background-size: 100% 60%;
     }
 
     &-image-2 {
+      z-index: 2;
       background: url(../images/main-boarder.png) no-repeat;
       background-position: top 105% left 92%;
       background-size: 46% auto;
-      z-index: 1;
     }
 
     &-image-3 {
