@@ -10,6 +10,8 @@ const email = document.querySelector('[type=email]');
 const age = document.querySelector('[name=age]');
 const level = document.querySelector('[name=level]');
 
+const submitted = document.querySelector('.modal-submitted');
+
 function toggleOffers(e) {
   open(bookingOverlay);
   level.value = e;
@@ -38,6 +40,11 @@ function submitForm() {
   }
 }
 
+function modalSubmitted() {
+  submitted.classList.add('modal-show');
+  setTimeout(() => submitted.classList.remove('modal-show'), 2000);
+}
+
 heroButton.addEventListener('click', () => open(bookingOverlay));
 
 offerButtons.addEventListener('click', e => {
@@ -61,6 +68,7 @@ form.addEventListener('submit', e => {
   submitForm();
   e.target.reset();
   close(bookingOverlay);
+  modalSubmitted();
 });
 
 window.addEventListener('keyup', e => {
