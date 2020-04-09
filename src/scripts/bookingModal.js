@@ -11,7 +11,7 @@ const age = document.querySelector('[name=age]');
 const level = document.querySelector('[name=level]');
 
 const submitted = document.querySelector('.modal-submitted');
-const submitResult = document.querySelector('.modal__submit-result');
+const submitResult = document.querySelector('.modal-submitted__result');
 
 function toggleOffers(e) {
   open(bookingOverlay);

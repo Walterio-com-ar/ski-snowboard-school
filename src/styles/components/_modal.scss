@@ -1,6 +1,6 @@
 .modal-overlay,
 .modal-submitted,
-.modal__submit-result {
+.modal-submitted__result {
   position: fixed;
   z-index: 99;
   opacity: 0;
@@ -20,7 +20,7 @@
   @include size(100vw, 100vh);
 }
 
-.modal__submit-result,
+.modal-submitted__result,
 .modal-submitted {
   color: $secondaryFontColor;
   border-radius: 10px;
@@ -33,7 +33,7 @@
   padding: 25px;
 }
 
-.modal__submit-result {
+.modal-submitted__result {
   position: fixed;
   top: 20px;
   left: 20px;
