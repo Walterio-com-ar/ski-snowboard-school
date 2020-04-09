@@ -11,10 +11,22 @@ const age = document.querySelector('[name=age]');
 const level = document.querySelector('[name=level]');
 
 const submitted = document.querySelector('.modal-submitted');
+const submitResult = document.querySelector('.modal__submit-result');
 
 function toggleOffers(e) {
   open(bookingOverlay);
   level.value = e;
+}
+
+function modalSubmitted(data) {
+  if (data) {
+    submitResult.querySelector('pre').textContent = data;
+    submitResult.classList.add('modal-show');
+    setTimeout(() => submitResult.classList.remove('modal-show'), 7000);
+  } else {
+    submitted.classList.add('modal-show');
+    setTimeout(() => submitted.classList.remove('modal-show'), 2000);
+  }
 }
 
 function submitForm() {
@@ -34,15 +46,10 @@ function submitForm() {
       },
     })
       .then(response => response.json())
-      .then(json => alert(`Data sent successfully to ${url}\n${JSON.stringify(json, null, ' ')}`));
+      .then(json => modalSubmitted(JSON.stringify(json, null, ' ')));
   } catch (error) {
-    alert('Error:', error);
+    modalSubmitted(error);
   }
-}
-
-function modalSubmitted() {
-  submitted.classList.add('modal-show');
-  setTimeout(() => submitted.classList.remove('modal-show'), 2000);
 }
 
 heroButton.addEventListener('click', () => open(bookingOverlay));
