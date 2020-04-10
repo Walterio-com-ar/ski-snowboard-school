@@ -18,8 +18,9 @@ function toggleOffers(e) {
   level.value = e;
 }
 
-function modalSubmitted(data) {
+function modalSubmitted(data, header) {
   if (data) {
+    submitResult.querySelector('p').textContent = header;
     submitResult.querySelector('pre').textContent = data;
     submitResult.classList.add('modal-show');
     setTimeout(() => submitResult.classList.remove('modal-show'), 7000);
@@ -46,9 +47,9 @@ function submitForm() {
       },
     })
       .then(response => response.json())
-      .then(json => modalSubmitted(JSON.stringify(json, null, ' ')));
+      .then(json => modalSubmitted(JSON.stringify(json, null, ' '), 'Data sent successfully'));
   } catch (error) {
-    modalSubmitted(error);
+    modalSubmitted(error, 'Error');
   }
 }
 
