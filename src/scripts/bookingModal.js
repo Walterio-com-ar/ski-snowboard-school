@@ -46,8 +46,13 @@ function submitForm() {
         'Content-type': 'application/json; charset=UTF-8',
       },
     })
-      .then(response => response.json())
-      .then(json => modalSubmitted(JSON.stringify(json, null, ' '), 'Data sent successfully'));
+      .then((response) => response.json())
+      .then((json) =>
+        modalSubmitted(
+          JSON.stringify(json, null, ' '),
+          'Data sent successfully'
+        )
+      );
   } catch (error) {
     modalSubmitted(error, 'Error');
   }
@@ -55,7 +60,7 @@ function submitForm() {
 
 heroButton.addEventListener('click', () => open(bookingOverlay));
 
-offerButtons.addEventListener('click', e => {
+offerButtons.addEventListener('click', (e) => {
   if (e.target.matches('[name=beginner]')) {
     toggleOffers('beginner');
   }
@@ -67,11 +72,11 @@ offerButtons.addEventListener('click', e => {
   }
 });
 
-bookingOverlay.addEventListener('click', e => {
+bookingOverlay.addEventListener('click', (e) => {
   if (e.target === e.currentTarget) close(bookingOverlay);
 });
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   submitForm();
   e.target.reset();
@@ -79,6 +84,6 @@ form.addEventListener('submit', e => {
   modalSubmitted();
 });
 
-window.addEventListener('keyup', e => {
+window.addEventListener('keyup', (e) => {
   if (e.key === 'Escape') close(bookingOverlay);
 });

@@ -4,7 +4,7 @@ const navObserverOptions = {
   rootMargin: '100px 0px 0px 0px',
 };
 
-const stickyNavObserver = new IntersectionObserver(entries => {
+const stickyNavObserver = new IntersectionObserver((entries) => {
   if (!entries[0].isIntersecting && document.body.clientWidth > 640) {
     nav.classList.add('sticky-nav');
   } else {

@@ -28,7 +28,7 @@ function handleKeyUp(e) {
   if (e.key === 'ArrowLeft') showPrevImage();
 }
 
-gallery.addEventListener('click', e => {
+gallery.addEventListener('click', (e) => {
   if (e.target.matches('.gallery-image')) {
     open(galleryOverlay);
     showImage(e.target);
@@ -37,7 +37,7 @@ gallery.addEventListener('click', e => {
 
 galleryOverlay.addEventListener('click', () => close(galleryOverlay));
 
-galleryModal.addEventListener('click', e => {
+galleryModal.addEventListener('click', (e) => {
   e.stopPropagation();
   if (e.target.matches('.modal-next')) showNextImage();
   if (e.target.matches('.modal-prev')) showPrevImage();

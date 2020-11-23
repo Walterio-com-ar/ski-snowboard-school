@@ -16,7 +16,7 @@ const dots = dotsContainer.querySelectorAll('.testimonials-dot');
 
 function activeDot() {
   const activeSlide = slides.indexOf(document.querySelector('.current'));
-  dots.forEach(e => e.classList.remove('dot-active'));
+  dots.forEach((e) => e.classList.remove('dot-active'));
   dots[activeSlide].classList.add('dot-active');
 }
 
@@ -34,7 +34,11 @@ function removeClasses() {
 
 function move() {
   removeClasses();
-  [prev, current, next] = [current, next, next.nextElementSibling || slider.firstElementChild];
+  [prev, current, next] = [
+    current,
+    next,
+    next.nextElementSibling || slider.firstElementChild,
+  ];
   applyClasses();
   activeDot();
 }
@@ -46,7 +50,7 @@ setInterval(() => {
   move();
 }, 10000);
 
-dotsContainer.addEventListener('click', e => {
+dotsContainer.addEventListener('click', (e) => {
   if (e.target.matches('.dot-active')) return;
   if (e.target.matches('.testimonials-dot')) {
     removeClasses();
