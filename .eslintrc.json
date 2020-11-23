@@ -1,5 +1,6 @@
 {
   "env": {
+    "es6": true,
     "browser": true,
     "node": true
   },
@@ -13,20 +14,20 @@
     "html",
     "prettier"
   ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
   "parserOptions": {
     "ecmaVersion": 2020,
-    "ecmaFeatures": {
-      "impliedStrict": true,
-      "classes": true
-    },
     "sourceType": "module"
   },
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "arrowParens": "always",
+        "trailingComma": true,
+        "parser": "flow"
+      }
+    ],
     "no-param-reassign": "off"
   }
 }
