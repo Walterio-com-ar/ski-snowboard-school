@@ -2,30 +2,81 @@
   position: relative;
   height: 330px;
   overflow-x: hidden;
+
+  &-dots {
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+    margin: 0 auto;
+  }
+
+  &-dot,
+  .dot-active {
+    transition: all 0.3s linear;
+  }
+
+  &-dot {
+    display: block;
+    @include size(15px);
+    background-color: $dotColor;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba($primaryColor, 0.5);
+    }
+  }
+}
+
+.dot-active,
+.dot-active:hover {
+  background-color: $primaryColor;
+  cursor: default;
 }
 
 .slide {
   position: absolute;
   width: 100%;
-  opacity: 0;
-  transform: translateX(-250%);
-  transition: transform 1.5s, opacity 0.3s;
+  left: 100%;
 
-  &.prev,
-  &.current {
-    opacity: 1;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes leftNext {
+  from {
+    left: 100%;
   }
-
-  &.prev {
-    transform: translateX(-150%);
+  to {
+    left: 0;
   }
+}
 
-  &.current {
-    transform: translateX(0);
+@keyframes leftCurr {
+  from {
+    left: 0;
   }
+  to {
+    left: -100%;
+  }
+}
 
-  &.next {
-    transform: translateX(150%);
+@keyframes rightNext {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes rightCurr {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
   }
 }
 
