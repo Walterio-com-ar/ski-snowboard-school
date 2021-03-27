@@ -1,9 +1,8 @@
 const images = document.querySelectorAll('[data-src]');
 
 function loadImage(img) {
-  const image = img;
-  const src = image.getAttribute('data-src');
-  image.src = src;
+  const src = img.getAttribute('data-src');
+  img.src = src;
 }
 
 const imagesObserver = new IntersectionObserver((entries) => {
