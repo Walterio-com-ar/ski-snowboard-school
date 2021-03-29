@@ -8,7 +8,7 @@
   "main": "src/index.html",
   "scripts": {
     "start": "npm run clean && parcel src/index.html --open",
-    "build": "npm run clean && parcel build src/index.html",
+    "build": "npm run clean && parcel build src/index.html --public-url ./",
     "clean": "rm -rf dist/*",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
