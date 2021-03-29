@@ -17,4 +17,4 @@ var e=document.querySelectorAll("[data-speed]"),t=document.querySelector("header
 },{}],"dPdB":[function(require,module,exports) {
 "use strict";require("./navMenu"),require("./stickyNav"),require("./gallery"),require("./slider"),require("./lazyLoading"),require("./bookingModal"),require("./parallax");
 },{"./navMenu":"KByA","./stickyNav":"WNaP","./gallery":"MxBI","./slider":"xStd","./lazyLoading":"V3iK","./bookingModal":"jqnp","./parallax":"TJpn"}]},{},["dPdB"], null)
-//# sourceMappingURL=Ski-Snowboard-School/app.cc1be8d8.js.map
+//# sourceMappingURL=/app.cc1be8d8.js.map
