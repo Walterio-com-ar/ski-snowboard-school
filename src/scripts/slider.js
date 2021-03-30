@@ -37,6 +37,10 @@ function dotClick(num) {
   clearTimeout(timeout);
   clearInterval(intrvl);
 
+  if (slides[0].style.left) {
+    slides[0].style.left = '';
+  }
+
   if (num > current) animateSlider(num + 1);
   else animateSlider(num + 1, true);
 
